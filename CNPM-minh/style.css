@@ -1,0 +1,309 @@
+/*
+ * QUẢN LÝ BÁN HÀNG SIÊU THỊ - Chung Style
+ * Phong cách: Nike (Đen trắng, bo tròn, hiệu ứng hover phồng lên)
+ */
+:root {
+    --app-black: #111111;
+    --app-gray: #757575;
+    --bg-color: #ffffff;
+    --card-bg: #f8f8f8; /* Nền thẻ hơi xám nhẹ */
+    --border-radius-lg: 15px; /* Bo tròn lớn */
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-color); /* Nền trắng tổng thể */
+    color: var(--app-black);
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--app-black);
+}
+p {
+    color: var(--app-gray);
+}
+a {
+    color: var(--app-black);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--app-black);
+    text-decoration: underline;
+}
+
+/* --- LAYOUT & SPLIT SCREEN (Login/Register) --- */
+.login-container { height: 100vh; }
+.bg-image { background-size: cover; background-position: center; position: relative; height: 100%; }
+.bg-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+.brand-text { position: absolute; bottom: 50px; left: 50px; color: white; z-index: 2; }
+.form-section { display: flex; align-items: center; justify-content: center; background-color: var(--bg-color); height: 100%; }
+.form-wrapper { width: 100%; max-width: 450px; padding: 20px; }
+.app-logo { font-weight: 900; font-size: 2rem; letter-spacing: -1px; margin-bottom: 30px; display: inline-block; }
+
+/* --- FORM FIELDS & BUTTONS --- */
+.form-control { 
+    height: 50px; 
+    border-radius: var(--border-radius-lg); /* Bo tròn */
+    border: 1px solid #e5e5e5; 
+    margin-bottom: 15px; 
+    font-weight: 500; 
+    padding: 10px 20px;
+}
+.form-control:focus { 
+    box-shadow: 0 0 0 0.25rem rgba(17, 17, 17, 0.1); /* Hiệu ứng focus nhẹ */
+    border-color: var(--app-black); 
+}
+.btn-primary-app { 
+    background-color: var(--app-black); 
+    color: white; 
+    height: 50px; 
+    width: 100%; 
+    border: 1px solid var(--app-black); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    border-radius: var(--border-radius-lg); /* Bo tròn */
+    transition: all var(--transition-speed); 
+    margin-top: 10px; 
+    text-decoration: none; 
+    display: inline-block; 
+    text-align: center; 
+    line-height: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+.btn-primary-app:hover { 
+    background-color: #333; /* Hơi xám hơn khi hover */
+    color: white; 
+    transform: translateY(-2px); /* Hiệu ứng nâng nhẹ */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Đổ bóng mạnh hơn */
+}
+
+.link-prompt { margin-top: 40px; text-align: center; font-size: 14px; color: var(--app-gray); }
+.link-prompt a { color: var(--app-black); font-weight: 700; text-decoration: none; }
+.link-prompt a:hover { text-decoration: underline; }
+
+/* --- REGISTER SPECIFIC --- */
+.register-form-section .form-wrapper { max-width: 550px; } 
+
+/* --- SIDEBAR & MAIN CONTENT --- */
+.sidebar { 
+    height: 100vh; 
+    position: fixed; 
+    width: 250px; 
+    padding-top: 0; 
+    border-right: 1px solid #eee; 
+    background-color: var(--bg-color); /* Đảm bảo nền sidebar trắng */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ cho sidebar */
+}
+
+/* Brand Logo */
+.brand-logo { 
+    font-weight: 900; 
+    font-size: 24px; 
+    padding: 20px 30px; 
+    margin-bottom: 30px; 
+    letter-spacing: -1px; 
+    text-transform: uppercase; 
+    background-color: var(--app-black); 
+    color: white; 
+    display: block; 
+    text-decoration: none; 
+    transition: all var(--transition-speed);
+}
+.brand-logo i {
+    margin-right: 5px;
+}
+.brand-logo:hover {
+    background-color: #333; /* Hơi xám hơn khi hover */
+    color: white;
+}
+
+/* Sidebar Nav Links */
+.sidebar .nav-link {
+    padding: 12px 30px;
+    color: var(--app-gray);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-speed);
+    border-radius: var(--border-radius-lg); /* Bo tròn các nav-link */
+    margin: 0 15px 5px 15px; /* Tạo khoảng cách và bo tròn */
+}
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--app-black);
+    color: white;
+    font-weight: 600;
+}
+
+.main-content { 
+    margin-left: 250px; 
+    padding: 40px 60px; 
+    background-color: var(--bg-color);
+}
+
+/* --- HERO SECTION (Index Page) --- */
+.hero-title { 
+    font-weight: 900; 
+    font-size: 4rem; 
+    line-height: 1; 
+    margin-bottom: 40px; 
+    letter-spacing: -2px; 
+    text-transform: uppercase; 
+    color: var(--app-black);
+}
+
+/* Feature Cards (Index Page) & Stat Cards (Admin Dashboard) */
+.feature-card, .stat-card { 
+    background-color: var(--card-bg); 
+    border: none; 
+    height: 300px; /* Chiều cao cố định cho feature-card */
+    position: relative; 
+    overflow: hidden; 
+    transition: all var(--transition-speed) ease; /* Chuyển động mượt mà */
+    cursor: pointer; 
+    text-decoration: none; 
+    display: block; 
+    color: inherit; 
+    border-radius: var(--border-radius-lg); /* Bo tròn */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ */
+    padding: 30px; /* Tăng padding */
+}
+.feature-card:hover, .stat-card:hover { 
+    transform: translateY(-5px) scale(1.02); /* Phồng lên và nâng nhẹ */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Đổ bóng mạnh hơn */
+    color: inherit; 
+}
+.feature-card .card-label { 
+    position: absolute; 
+    bottom: 30px; /* Điều chỉnh vị trí */
+    left: 30px; 
+    font-weight: 800; 
+    font-size: 24px; 
+    text-transform: uppercase; 
+    color: var(--app-black);
+}
+.feature-card .card-icon { 
+    position: absolute; 
+    top: 30px; 
+    right: 30px; 
+    font-size: 36px; /* Kích thước icon lớn hơn */
+    opacity: 0.1; /* Giảm độ mờ */
+    color: var(--app-black);
+}
+
+/* Đặc biệt cho card HR (nền đen) */
+.bg-hr { 
+    background-color: var(--app-black); 
+    color: white !important; 
+}
+.bg-hr .card-label, .bg-hr .card-icon {
+    color: white !important;
+    opacity: 0.7; /* Icon và text rõ hơn trên nền đen */
+}
+
+/* Stat Cards (Admin Dashboard) */
+.stat-card {
+    height: auto; /* Chiều cao tự động */
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.stat-card .stat-icon { 
+    font-size: 45px; /* Kích thước icon lớn hơn */
+    opacity: 0.1; 
+    margin-bottom: 15px; 
+    align-self: flex-start; /* Icon căn trái */
+}
+.stat-card h3 {
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+.stat-card p.small {
+    color: var(--app-gray);
+    font-size: 0.85rem;
+}
+
+/* Chart Placeholder */
+.chart-placeholder { 
+    height: 350px; 
+    background-color: var(--card-bg); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: var(--app-gray); 
+    font-weight: 600; 
+    border: 1px dashed #e0e0e0; 
+    border-radius: var(--border-radius-lg); /* Bo tròn */
+}
+
+/* Table Style */
+.table-clean {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Tạo khoảng cách giữa các hàng */
+}
+.table-clean thead th { 
+    font-weight: 600; 
+    color: var(--app-gray); 
+    border-bottom: 1px solid #e0e0e0; 
+    text-transform: uppercase; 
+    font-size: 12px; 
+    padding-bottom: 15px; 
+    padding-top: 0; /* Bỏ padding top của header */
+}
+.table-clean tbody td { 
+    padding: 20px 15px; /* Padding cho từng ô */
+    font-weight: 500; 
+    border-bottom: 1px solid #f0f0f0; 
+    background-color: var(--bg-color); /* Nền trắng cho hàng */
+}
+.table-clean tbody tr {
+    transition: all var(--transition-speed);
+    border-radius: var(--border-radius-lg); /* Bo tròn hàng */
+    overflow: hidden; /* Quan trọng để bo tròn hoạt động */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ cho hàng */
+}
+.table-clean tbody tr:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng mạnh hơn khi hover */
+    transform: translateY(-2px); /* Nâng nhẹ hàng */
+}
+.table-clean tbody tr:first-child {
+    border-top-left-radius: var(--border-radius-lg);
+    border-top-right-radius: var(--border-radius-lg);
+}
+.table-clean tbody tr:last-child {
+    border-bottom-left-radius: var(--border-radius-lg);
+    border-bottom-right-radius: var(--border-radius-lg);
+}
+.table-clean .badge {
+    padding: 6px 12px;
+    border-radius: 12px; /* Bo tròn huy hiệu */
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+
+## 2. File `index.php` (Đã cập nhật HTML, không thay đổi chức năng)
+
+File này chỉ được đảm bảo sử dụng các class CSS mới và cấu trúc HTML đúng để áp dụng style mới.
+
+
+http://googleusercontent.com/immersive_entry_chip/0
+
+## 3. File `admin_dashboard.php` (Đã cập nhật HTML, không thay đổi chức năng)
+
+File này cũng được đảm bảo sử dụng các class CSS mới và cấu trúc HTML đúng.
+
+
+http://googleusercontent.com/immersive_entry_chip/1
