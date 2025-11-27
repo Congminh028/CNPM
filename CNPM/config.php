@@ -30,4 +30,9 @@ function isLoggedIn() {
 function getCurrentUser() {
     return isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Khách';
 }
+// 6. Hàm lấy vai trò (role) người dùng hiện tại (PHẦN BỔ SUNG)
+function getCurrentUserRole() {
+    // Lấy giá trị 'user_role' đã được lưu trong login.php khi đăng nhập
+    return $_SESSION['user_role'] ?? '';
+}
 // KHÔNG CÓ THẺ ĐÓNG PHP

@@ -65,7 +65,7 @@ $is_admin = $current_role === 'admin';
         <a class="nav-link" href="#"><i class="fas fa-user-circle"></i> Tài khoản</a>
         <?php if(isLoggedIn()): ?>
             <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i> Bán hàng</a>
-            <a class="nav-link" href="#"><i class="fas fa-box"></i> Quản lý kho</a>
+            <a class="nav-link" href="inventory.php"><i class="fas fa-box"></i> Quản lý kho</a>
             <?php if($is_admin): ?>
                 <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Báo cáo</a>
                 <a class="nav-link" href="#"><i class="fas fa-cog"></i> Cài đặt</a>
@@ -121,7 +121,7 @@ $is_admin = $current_role === 'admin';
 
             <?php if($is_admin || $current_role === 'inventory'): ?>
             <div class="col-md-4">
-                <a href="#" class="feature-card bg-hr p-4 rounded-0">
+                <a href="inventory.php" class="feature-card bg-hr p-4 rounded-0">
                     <i class="fas fa-box card-icon text-white"></i>
                     <div class="h-100 d-flex align-items-end">
                         <div>
