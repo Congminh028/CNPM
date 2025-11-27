@@ -1,0 +1,52 @@
+/*
+ * QUẢN LÝ BÁN HÀNG SIÊU THỊ - Chung Style
+ */
+:root {
+    --app-black: #111111;
+    --app-gray: #757575;
+    --bg-color: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- LAYOUT & SPLIT SCREEN --- */
+.login-container { height: 100vh; }
+.bg-image { background-size: cover; background-position: center; position: relative; height: 100%; }
+.bg-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+.brand-text { position: absolute; bottom: 50px; left: 50px; color: white; z-index: 2; }
+.form-section { display: flex; align-items: center; justify-content: center; background-color: #fff; height: 100%; }
+.form-wrapper { width: 100%; max-width: 450px; padding: 20px; }
+.app-logo { font-weight: 900; font-size: 2rem; letter-spacing: -1px; margin-bottom: 30px; display: inline-block; }
+
+/* --- FORM FIELDS & BUTTONS --- */
+.form-control { height: 50px; border-radius: 0; border: 1px solid #e5e5e5; margin-bottom: 15px; font-weight: 500; }
+.form-control:focus { box-shadow: none; border-color: var(--app-black); }
+.btn-primary-app { 
+    background-color: var(--app-black); color: white; height: 50px; width: 100%; 
+    border: 1px solid var(--app-black); font-weight: 700; text-transform: uppercase; 
+    border-radius: 30px; transition: all 0.3s; margin-top: 10px; text-decoration: none; 
+    display: inline-block; text-align: center; line-height: 30px;
+}
+.btn-primary-app:hover { background-color: white; color: var(--app-black); }
+
+.link-prompt { margin-top: 40px; text-align: center; font-size: 14px; color: var(--app-gray); }
+.link-prompt a { color: var(--app-black); font-weight: 700; text-decoration: none; }
+
+/* --- REGISTER SPECIFIC --- */
+.register-form-section .form-wrapper { max-width: 550px; } 
+
+/* --- SIDEBAR & INDEX STYLES (Cần thiết cho index.php) --- */
+.sidebar { height: 100vh; position: fixed; width: 250px; padding-top: 40px; border-right: 1px solid #eee; }
+.brand-logo { font-weight: 900; font-size: 24px; padding-left: 30px; margin-bottom: 50px; letter-spacing: -1px; text-transform: uppercase; }
+.main-content { margin-left: 250px; padding: 40px 60px; }
+.hero-title { font-weight: 900; font-size: 4rem; line-height: 1; margin-bottom: 40px; letter-spacing: -2px; text-transform: uppercase; }
+.btn-outline-app {
+    display: inline-block; background-color: transparent; color: var(--app-black);
+    border-radius: 30px; padding: 10px 25px; font-weight: 600;
+    border: 1px solid #e5e5e5; text-decoration: none; text-align: center;
+}
+.btn-outline-app:hover { border-color: var(--app-black); color: var(--app-black); }
